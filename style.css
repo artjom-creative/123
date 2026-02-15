@@ -1,0 +1,96 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.app {
+  max-width: 920px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(35, 54, 88, 0.12);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  border: 1px solid #cad6ef;
+  background: #eef3ff;
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+}
+
+.tab.is-active {
+  background: #2c5be8;
+  color: white;
+  border-color: #2c5be8;
+}
+
+.screen {
+  display: none;
+}
+
+.screen.is-active {
+  display: block;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.action-btn {
+  border: 1px solid #cad6ef;
+  background: white;
+  border-radius: 10px;
+  padding: 0.8rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  border-color: #2c5be8;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #d8e1f1;
+  padding: 0.7rem;
+  text-align: left;
+}
+
+th {
+  background: #eef3ff;
+}
+
+.formula {
+  color: #4f628c;
+}
+
+.result-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+}

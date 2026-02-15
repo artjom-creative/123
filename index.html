@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regnskap Simulator MVP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Regnskap Simulator (MVP)</h1>
+
+      <nav class="tabs" aria-label="Экраны симулятора">
+        <button class="tab is-active" data-screen="actions">Экран 1 — Действия</button>
+        <button class="tab" data-screen="journal">Экран 2 — Журнал</button>
+        <button class="tab" data-screen="balance">Экран 3 — Баланс</button>
+        <button class="tab" data-screen="result">Экран 4 — Resultat</button>
+      </nav>
+
+      <section id="actions" class="screen is-active">
+        <h2>Действия</h2>
+        <div class="actions-grid">
+          <button class="action-btn" data-action="equity">💰 Внести 100 000 NOK egenkapital</button>
+          <button class="action-btn" data-action="loan">🏦 Взять кредит 50 000 NOK</button>
+          <button class="action-btn" data-action="equipment">💻 Купить utstyr 20 000 NOK</button>
+          <button class="action-btn" data-action="income">📈 Получить inntekt 15 000 NOK</button>
+          <button class="action-btn" data-action="rent">🏠 Заплатить husleie 8 000 NOK</button>
+        </div>
+      </section>
+
+      <section id="journal" class="screen">
+        <h2>Журнал</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Дебет</th>
+              <th>Кредит</th>
+              <th>Сумма</th>
+            </tr>
+          </thead>
+          <tbody id="journal-body"></tbody>
+        </table>
+      </section>
+
+      <section id="balance" class="screen">
+        <h2>Баланс</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Eiendeler</th>
+              <th>Gjeld</th>
+              <th>Egenkapital</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="assets-total">0 NOK</td>
+              <td id="liabilities-total">0 NOK</td>
+              <td id="equity-total">0 NOK</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="result" class="screen">
+        <h2>Resultat</h2>
+        <p class="formula">Inntekter – Kostnader</p>
+        <p id="result-total" class="result-value">0 NOK</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
